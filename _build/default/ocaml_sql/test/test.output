@@ -1,3 +1,0 @@
-SELECT * FROM table1
-SELECT table_id FROM table_1 INNER JOIN table_2 ON (table_1_id = table_2_id)
-SELECT table_id FROM table_1 INNER JOIN (SELECT ticket_id FROM table_2) AS table_2_id ON (table_1_id = table_2_id)

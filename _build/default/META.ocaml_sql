@@ -1,6 +1,0 @@
-description = ""
-requires = "core"
-archive(byte) = "ocaml_sql.cma"
-archive(native) = "ocaml_sql.cmxa"
-plugin(byte) = "ocaml_sql.cma"
-plugin(native) = "ocaml_sql.cmxs"

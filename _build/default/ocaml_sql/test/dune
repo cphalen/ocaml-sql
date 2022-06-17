@@ -1,3 +1,0 @@
-(test
- (name ocaml_sql)
- (libraries core))

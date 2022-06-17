@@ -1,0 +1,41 @@
+(lang dune 3.2)
+(name ocaml_sql)
+(sections (lib .) (libexec .) (bin ../../bin))
+(files
+ (lib
+  (META
+   dune-package
+   ocaml_sql.a
+   ocaml_sql.cma
+   ocaml_sql.cmi
+   ocaml_sql.cmt
+   ocaml_sql.cmx
+   ocaml_sql.cmxa
+   ocaml_sql.ml
+   ocaml_sql__Sql.cmi
+   ocaml_sql__Sql.cmt
+   ocaml_sql__Sql.cmx
+   opam
+   sql.ml))
+ (libexec (ocaml_sql.cmxs))
+ (bin (ocaml_sql)))
+(library
+ (name ocaml_sql)
+ (kind normal)
+ (archives (byte ocaml_sql.cma) (native ocaml_sql.cmxa))
+ (plugins (byte ocaml_sql.cma) (native ocaml_sql.cmxs))
+ (native_archives ocaml_sql.a)
+ (requires core)
+ (main_module_name Ocaml_sql)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Ocaml_sql)
+   (modules ((name Sql) (obj_name ocaml_sql__Sql) (visibility public) (impl)))
+   (alias_module
+    (name Ocaml_sql)
+    (obj_name ocaml_sql)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))

@@ -1,0 +1,2 @@
+(** @canonical Ocaml_sql.Sql *)
+module Sql = Ocaml_sql__Sql

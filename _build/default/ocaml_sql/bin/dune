@@ -1,0 +1,4 @@
+(executable
+ (public_name ocaml_sql)
+ (name main)
+ (libraries ocaml_sql core))
